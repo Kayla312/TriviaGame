@@ -30,4 +30,40 @@
 // 		~~could be done using nested containers
 // 		~~so that as each thing happens (on click for start button—>changes main container…after answering all the questions or timer running out(alert about timer running down)—>changes main container…
 
-	
+
+// QUESTION 1
+// Which electronic musical instrument emits the eeriest of sounds and is the only instrument played without touching it?
+// Show Answer
+// Answer: Theremin - It's familiar, haunting tones are coaxed out of the machine by waving one's hands around it.
+
+// QUESTION 2
+// How many keys are on most baby grand pianos?
+// Show Answer
+// Answer: 88 
+// More information: The Piano is a stringed musical instrument invented around the year 1700, in which the strings are struck by hammers.
+
+// QUESTION 3
+// Who was the lead singer of the band "Queen"?
+// Show Answer
+// Answer: Freddie Mercury 
+// More information: Freddie Mercury was a British singer, songwriter, and record producer. He was best known as the lead vocalist of the rock band "Queen".
+
+// QUESTION 4
+// How many valves does a trumpet have?
+// Show Answer
+// Answer: Three
+
+// QUESTION 5
+// What was Jimi Hendrix's real name?
+// Show Answer
+// Answer: James Marshall Hendrix
+
+// QUESTION 6
+//  "I" is for "Intonation".
+
+// Which of the following is a synonym of intonation?
+
+//  Timbre
+//  Staccato
+//  Legato
+//  Pitch
