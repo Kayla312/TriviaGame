@@ -61,9 +61,22 @@
 // QUESTION 6
 //  "I" is for "Intonation".
 
+// QUESTIONS 7
 // Which of the following is a synonym of intonation?
 
 //  Timbre
 //  Staccato
 //  Legato
 //  Pitch
+
+// QUESTION 8
+// The Stratocaster is a model of which guitar maker? 
+// answer :Fender
+
+// QUESTION 9
+// London born singer Miss Adkins is better known by what name?
+// ANSWER: Adele
+
+// QUESTION 10
+// In which American city was Elvis discovered dead in 1977?
+// ANSWER :Memphis
