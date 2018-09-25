@@ -8,9 +8,10 @@ body {
     background-size: cover;
     margin-left: 100px;
 }
+/* looking at an example online, i changed the inline styling of the CSS to center the text with minimal effort, then adjusted the padding so that it floats in the middle a bit  */
 .card {
     margin-top: 200px;
     margin-right: 100px;
     font-size: 50px;
-    padding-left: 275px;
+    /* padding-left: 275px; */
 }
