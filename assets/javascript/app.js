@@ -42,7 +42,7 @@ console.log ("spot 1");
 // ********QUESTIONS TO BE INSERTED INTO THE CARD********
 // eaach question has a list of answers and the correct answer, that should be checked against
 var questions = [{
-    question: "Which electronic musical instrument emits the eeriest of sounds and is the only instrument played without touching it?",
+  question: "Which electronic musical instrument emits the eeriest of sounds and is the only instrument played without touching it?",
 	answers: ["Volin", "Conch", "Oboe", "Theremin"],
 	correctAnswer: "Theremin"
 }, 
@@ -114,7 +114,7 @@ var game = {
     start: function() {
         // trigger the function up above for the amount of milliseconds (aka 1 second at a time)
       timer = setInterval(game.countdown, 1000);
-      console.log("did you get to this point?");
+      console.log("did you get to this point? spot 2");
   
       $("#count").prepend("<h2>Time Remaining: <span id='count-down'>120</span> seconds</h2>");
   
@@ -125,7 +125,7 @@ var game = {
         for (var x = 0; x < questions[i].answers.length; x++) {
           card.append("<input class='card-body' type='radio' name='question-" + i +
           "' value='" + questions[i].answers[x] + "''>" + questions[i].answers[x]);
-          console.log("how about here?");
+          console.log("how about here? spot 3");
         }
       }
   
@@ -138,7 +138,7 @@ var game = {
     $.each($("input[name='question-0']:checked"), function() {
       if ($(this).val() === questions[0].correctAnswer) {
         game.correct++;
-        console.log("did you make it all the way down here?");
+        console.log("did you make it all the way down here? spot 4");
       }
       else {
         game.incorrect++;
