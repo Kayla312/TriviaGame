@@ -87,15 +87,16 @@ var game = {
 
         // styling for each question
       for (var i = 0; i < questions.length; i++) {
-        card.append("<div class= 'card-text'>" + questions[i].question + "</div>");
+        card.append("<div class='card-text'>" + questions[i].question + "</div>");
         for (var x = 0; x < questions[i].answers.length; x++) {
-          card.append("<input type='radio' name='question-" + i +
-          "' value='" + questions[i].answers[x] + "''>" + questions[i].answers[x]);
+          card.append("<div class='card-text'><input type='checkbox' name='question-" + i +
+          "' value='" + questions[i].answers[x] + "''>" + questions[i].answers[x]+ '</div>');
           console.log("how about here? spot 3");
         }
+        card.append("<hr>");
       }
   
-      card.after("<button class = 'primary' id='done'>done</button>");
+      card.after("<button class='btn btn-info btn-block' id='done'>done</button>");
     },
   
 // go through each question, and attach it to the page, and connect it, so that when submitted, it will show the right and wrong score.
