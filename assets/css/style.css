@@ -1,17 +1,12 @@
 body {
     background-image: url("../images/mark-solarski-183866-unsplash.jpg");
     background-repeat: no-repeat;
-    background-size:960px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
-    margin-left: 100px;
+    background-attachment: fixed;
 }
-/* looking at an example online, i changed the inline styling of the CSS to center the text with minimal effort, then adjusted the padding so that it floats in the middle a bit  */
 .card {
     margin-top: 200px;
     margin-right: 100px;
     font-size: 50px;
-    /* padding-left: 275px; */
+    /* padding-left: 275px;*/
 }

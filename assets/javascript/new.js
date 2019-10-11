@@ -72,7 +72,7 @@ var game = {
   
     countdown: function() {
       game.counter--;
-      $("#count").html("<h2> Time Remaining: <span id='count-down'>" + game.counter +"</span> second</h2>" )
+      $("#count").html("<div> Time Remaining: <span id='count-down'>" + game.counter +"</span> second</div>" )
       if (game.counter === 0) {
         game.done();
         console.log("the timer works, you idiot");
@@ -82,22 +82,20 @@ var game = {
     start: function() {
         // trigger the function up above for the amount of milliseconds (aka 1 second at a time)
       timer = setInterval(game.countdown, 1000);
-      console.log("did you get to this point? spot 2");
-        // only shows up for the first second of the timer running and then takes away the h2 element entirely
-      //$("#count").append("<h2>Time Remaining: <span id='count-down'>" + timer + "</span> seconds</h2>");
-  
-      $("#start").remove();
+      console.log("did you get to this point? spot 2"); //checking functionality
+      $("#start").remove();// removes the start button once clicked for user
+
         // styling for each question
       for (var i = 0; i < questions.length; i++) {
-        card.append("<div class= 'card-title'>" + questions[i].question + "</div>");
+        card.append("<div class= 'card-text'>" + questions[i].question + "</div>");
         for (var x = 0; x < questions[i].answers.length; x++) {
-          card.append("<input class='card-text' type='radio' name='question-" + i +
+          card.append("<input type='radio' name='question-" + i +
           "' value='" + questions[i].answers[x] + "''>" + questions[i].answers[x]);
           console.log("how about here? spot 3");
         }
       }
   
-      card.append("<button id='done'>done</button>");
+      card.after("<button class = 'primary' id='done'>done</button>");
     },
   
 // go through each question, and attach it to the page, and connect it, so that when submitted, it will show the right and wrong score.
