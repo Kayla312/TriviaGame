@@ -116,7 +116,7 @@ var game = {
       timer = setInterval(game.countdown, 1000);
       console.log("did you get to this point? spot 2");
   
-      $("#count").prepend("<h2>Time Remaining: <span id='count-down'>120</span> seconds</h2>");
+      $("#count").prepend("<h2>Time Remaining: <span id='count-down'></span> seconds</h2>");
   
       $("#start").remove();
   
