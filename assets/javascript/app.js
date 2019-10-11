@@ -19,7 +19,7 @@
 // 	if there are answers un-answered when the time runs out, 1++ unanswered
 
 //  Have a timer set up to count down (depending on how hard the questions are the time length)*****
-// 	show an alert at 30 second left to warn the player(NOT HAPPENING FUCK OFF)
+// 	show an alert at 30 second left to warn the player
 // 	when the timer runs out,  calculate the accurate scores for correct, incorrect and unanswered
 // 	display the score on the page for the player to review at the end of the game 
 

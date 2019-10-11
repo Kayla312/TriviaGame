@@ -1,7 +1,7 @@
 // ********QUESTIONS TO BE INSERTED INTO THE CARD********
 // each question has a list of answers and the correct answer, that should be checked against
 var questions = [{
-  question: "Which electronic musical instrument emits the eeriest of sounds and is the only instrument played without touching it?",
+    question: "Which electronic musical instrument emits the eeriest of sounds and is the only instrument played without touching it?",
 	answers: ["Volin", "Conch", "Oboe", "Theremin"],
 	correctAnswer: "Theremin"
 }, 
@@ -72,7 +72,7 @@ var game = {
   
     countdown: function() {
       game.counter--;
-      $("#count").html(game.counter);
+      $("#count").html("<h2> Time Remaining: <span id='count-down'>" + game.counter +"</span> second</h2>" )
       if (game.counter === 0) {
         game.done();
         console.log("the timer works, you idiot");
@@ -83,15 +83,15 @@ var game = {
         // trigger the function up above for the amount of milliseconds (aka 1 second at a time)
       timer = setInterval(game.countdown, 1000);
       console.log("did you get to this point? spot 2");
-  
-      $("#count").prepend("<h2>Time Remaining: <span id='count-down'></span> seconds</h2>");
+        // only shows up for the first second of the timer running and then takes away the h2 element entirely
+      //$("#count").append("<h2>Time Remaining: <span id='count-down'>" + timer + "</span> seconds</h2>");
   
       $("#start").remove();
-  
+        // styling for each question
       for (var i = 0; i < questions.length; i++) {
-        card.append("<div>" + questions[i].question + "</div>");
+        card.append("<div class= 'card-title'>" + questions[i].question + "</div>");
         for (var x = 0; x < questions[i].answers.length; x++) {
-          card.append("<input class='card-body' type='radio' name='question-" + i +
+          card.append("<input class='card-text' type='radio' name='question-" + i +
           "' value='" + questions[i].answers[x] + "''>" + questions[i].answers[x]);
           console.log("how about here? spot 3");
         }
@@ -102,124 +102,111 @@ var game = {
   
 // go through each question, and attach it to the page, and connect it, so that when submitted, it will show the right and wrong score.
     done: function() {
-    // first question, because it is in array position 0
-    $.each($("input[name='question-0']:checked"), function() {
-      if ($(this).val() === questions[0].correctAnswer) {
-        game.correct++;
-        console.log("did you make it all the way down here? spot 4");
-      }
-      else {
-        game.incorrect++;
-      }
-    });
-    // second question, in array position 1
-    $.each($("input[name='question-1']:checked"), function() {
-      if ($(this).val() === questions[1].correctAnswer) {
-        game.correct++;
-      }
-      else {
-        game.incorrect++;
-      }
-    });
-    // etc. etc.
-    $.each($("input[name='question-2']:checked"), function() {
-      if ($(this).val() === questions[2].correctAnswer) {
-        game.correct++;
-      }
-      else {
-        game.incorrect++;
-      }
-    });
-    // etc. etc.
-    $.each($("input[name='question-3']:checked"), function() {
-      if ($(this).val() === questions[3].correctAnswer) {
-        game.correct++;
-      }
-      else {
-        game.incorrect++;
-      }
-    });
-    // etc. etc.
-    $.each($("input[name='question-4']:checked"), function() {
-      if ($(this).val() === questions[4].correctAnswer) {
-        game.correct++;
-      }
-      else {
-        game.incorrect++;
-      }
-    });
-    // etc. etc.
-    $.each($("input[name='question-5']:checked"), function() {
-      if ($(this).val() === questions[5].correctAnswer) {
-        game.correct++;
-      }
-      else {
-        game.incorrect++;
-      }
-    });
-    // etc. etc.
-    $.each($("input[name='question-6']:checked"), function() {
-      if ($(this).val() === questions[6].correctAnswer) {
-        game.correct++;
-      }
-      else {
-        game.incorrect++;
-      }
-    });
-    // etc. etc.
-    $.each($("input[name='question-7']:checked"), function() {
-      if ($(this).val() === questions[7].correctAnswer) {
-        game.correct++;
-      }
-      else {
-        game.incorrect++;
-      }
-      
-    });
-    // etc. etc.
-    $.each($("input[name='question-8']:checked"), function() {
-      if ($(this).val() === questions[8].correctAnswer) {
-        game.correct++;
-      }
-      else {
-        game.incorrect++;
-      }
-      
-    });
-    // etc. etc.
-    $.each($("input[name='question-9']:checked"), function() {
-      if ($(this).val() === questions[9].correctAnswer) {
-        game.correct++;
-      }
-      else {
-        game.incorrect++;
-      }
-    
-    });
+        // FIRST QUESTION because it is in array position 0
+        $.each($("input[name='question-0']:checked"), function() {
+            if ($(this).val() === questions[0].correctAnswer) {
+                game.correct++;
+                console.log("did you make it all the way down here? spot 4");
+            }
+            else {
+                game.incorrect++;
+            }
+        });
+        // SECOND QUESTIONS in array position 1
+        $.each($("input[name='question-1']:checked"), function() {
+            if ($(this).val() === questions[1].correctAnswer) {
+                game.correct++;
+            }
+            else {
+                game.incorrect++;
+            }
+        });
+        // THIRD QUESTION
+        $.each($("input[name='question-2']:checked"), function() {
+            if ($(this).val() === questions[2].correctAnswer) {
+                game.correct++;
+            }
+            else {
+                game.incorrect++;
+            }
+        });
+        // FOURTH QUESTION
+        $.each($("input[name='question-3']:checked"), function() {
+            if ($(this).val() === questions[3].correctAnswer) {
+                game.correct++;
+            }
+            else {
+                game.incorrect++;
+            }
+        });
+        // FIFTH QUESTION
+        $.each($("input[name='question-4']:checked"), function() {
+            if ($(this).val() === questions[4].correctAnswer) {
+                game.correct++;
+            }
+            else {
+                game.incorrect++;
+            }
+        });
+        // SIXTH QUESTION
+        $.each($("input[name='question-5']:checked"), function() {
+            if ($(this).val() === questions[5].correctAnswer) {
+                game.correct++;
+            }
+            else {
+                game.incorrect++;
+            }
+        });
+        // SEVENTH QUESTION
+        $.each($("input[name='question-6']:checked"), function() {
+            if ($(this).val() === questions[6].correctAnswer) {
+                game.correct++;
+            }
+            else {
+                game.incorrect++;
+            }
+        });
+        // EIGHTH QUESTION
+        $.each($("input[name='question-7']:checked"), function() {
+            if ($(this).val() === questions[7].correctAnswer) {
+                game.correct++;
+            }
+            else {
+                game.incorrect++;
+            }
+        });
+        // NINTH QUESTION
+        $.each($("input[name='question-8']:checked"), function() {
+            if ($(this).val() === questions[8].correctAnswer) {
+                game.correct++;
+            }
+            else {
+                game.incorrect++;
+            }
+        });
+        // TENTH AND FINAL QUESTION
+        $.each($("input[name='question-9']:checked"), function() {
+            if ($(this).val() === questions[9].correctAnswer) {
+                game.correct++;
+            }
+            else {
+                game.incorrect++;
+            }
+        });
     this.result();
-},
-result: function() {
+    },
+    result: function() {
 
-    clearInterval(timer);
+        clearInterval(timer);
 
-    card.html("<h2>All Done!</h2>");
-    card.append("<h3>Correct Answers: " + this.correct + "</h3>");
-    card.append("<h3>Incorrect Answers: " + this.incorrect + "</h3>");
-    card.append("<h3>Unanswered: " + (questions.length - (this.incorrect + this.correct)) + "</h3>");
-}
+        card.html("<h2>All Done!</h2>");
+        card.append("<h3>Correct Answers: " + this.correct + "</h3>");
+        card.append("<h3>Incorrect Answers: " + this.incorrect + "</h3>");
+        card.append("<h3>Unanswered: " + (questions.length - (this.incorrect + this.correct)) + "</h3>");
+        }
 };
-    
+// END GAME FUNCTIONALITY
 
-    // result: function() {
-
-    //     clearInterval(timer);
-    
-    
-    //     card.html("<h2>All Done!</h2>");
-    //     card.append("<h3>Correct Answers: " + this.correct + "</h3>");
-    //     card.append("<h3>Incorrect Answers: " + this.incorrect + "</h3>");
-    //     card.append("<h3>Unanswered: " + (questions.length - (this.incorrect + this.correct)) + "</h3>");
-    // }
 
     // CLICK EVENTS
     // goes into the document, listens for the user to click something with the ID start-->
@@ -240,18 +227,3 @@ result: function() {
     
 
 
-// sets initial time for the questions to be completed to 60 seconds
-// var time = 60;
-
-// function timer() {
-//     clock = setInterval(countDown, 1000);
-//     function countDown() {
-//         if (time < 1) {
-//             clearInterval(clock);
-//             userTimeout();
-//         }
-//         if (time > 0) {
-//             time--;
-//         }
-//         $("#timer").html("<strong>" + time + "</strong>");
-//     }};
