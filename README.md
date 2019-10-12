@@ -10,3 +10,12 @@
 
 * The player cannot pick more than one answer per question.
 
+## Finished Build
+#### Game Start
+![GameStart](assets/images/trivia_game_start.png)
+
+#### Game Function
+![GameFunction](assets/images/trivia_game_function.png)
+
+#### Game Finish
+![GameEnd](assets/images/trivia_game_finish.png)
